@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{products.name}}
+{{products.about}}
+{{products.price}}
+<img src="{{products.product_image.url}}" alt="Уникальное место">
+
+{% if user.is_authenticated %}
+ <div class="item-practice__content">
+     <h4><a href="{% url 'cart' %}"> В корзину</a></h4>
+ </div>
+
+{% endif %}
+
+</body>
+</html>
